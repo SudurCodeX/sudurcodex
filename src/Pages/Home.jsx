@@ -7,7 +7,8 @@ const Home = () => {
 <h2 className='text-4xl font-bold'>
     This is Home Page
      </h2>   
-     <p>This is a codex webste</p>   
+     <p>This is a codex webste</p>  
+     <h1>This is a heading</h1> 
     </div>
   )
 }
