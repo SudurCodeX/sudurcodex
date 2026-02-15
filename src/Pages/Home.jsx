@@ -6,7 +6,8 @@ const Home = () => {
 
 <h2 className='text-4xl font-bold'>
     This is Home Page
-     </h2>      
+     </h2>   
+     <p>This is a codex webste</p>   
     </div>
   )
 }
