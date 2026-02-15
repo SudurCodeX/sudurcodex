@@ -5,6 +5,9 @@ const Home = () => {
     <>
      <h2>Home Page
       helllookvvbvbbvx
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, ex!
+      </p>
      </h2>
     </>
   )
