@@ -18,7 +18,6 @@ const Navbar = () => {
                 X
                 </span>
         </h1>
-
         {/* Desktop Menu */}
         <ul className="hidden md:flex px-8 space-x-8 text-md font-medium">
           <li className="hover:text-blue-400 cursor-pointer">Home</li>
@@ -27,7 +26,6 @@ const Navbar = () => {
           <li className="hover:text-blue-400 cursor-pointer">Workshops</li>
           <li className="hover:text-blue-400 cursor-pointer">Contact</li>
         </ul>
-
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -35,7 +33,6 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-900 px-6 py-2 pb-6">
