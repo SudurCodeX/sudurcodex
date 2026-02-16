@@ -72,7 +72,7 @@ const Navbar = () => {
             Services
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/workshops"
             className={({ isActive }) =>
               isActive
@@ -81,7 +81,7 @@ const Navbar = () => {
             }
           >
             WorkShops
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="/contact"
@@ -127,9 +127,9 @@ const Navbar = () => {
               <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/workshops" onClick={() => setIsOpen(false)}>WorkShops</Link>
-            </li>
+            </li> */}
 
             <li>
               <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
