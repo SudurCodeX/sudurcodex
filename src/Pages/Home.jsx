@@ -19,28 +19,38 @@ const Home = () => {
 
   {/* Content */}
   <div className="relative z-10 max-w-5xl px-6 text-center">
+        <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-6">
+          ✨ Transforming Businesses Digitally
+        </div>
+         {/* Heading */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-zinc-100">
+          Your Vision,{" "}
+          <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+            Our Innovation
+          </span>
+        </h1>
+        {/* Description */}
+        <p className="mt-6 text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+          SudurcodeX delivers cutting-edge digital solutions to help your
+          business thrive in the modern world. From AI-powered tools to
+          stunning web experiences.
+        </p>
 
-    <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-      Empowering Nepal Through
-      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-        {" "}Technology & Innovation
-      </span>
-    </h1>
+        {/* Buttons */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          
+          <button className="px-6 py-3 rounded-lg text-white font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90 transition">
+            Get Started →
+          </button>
 
-    <p className="mt-6 text-blue-200 text-lg max-w-3xl mx-auto">
-      SudurCodex is a Nepal-based IT company delivering modern web development,
-      AI-driven solutions, and industry-focused IT training programs.
-    </p>
+          <button className="px-6 py-3 rounded-lg border border-gray-400 text-zinc-100 font-medium hover:bg-orange-400 transition">
+            View Our Work
+          </button>
 
-    <div className="mt-8 flex justify-center gap-4">
-      <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">
-        Our Services
-      </button>
+        </div>
+  
 
-      <button className="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-        Join Training
-      </button>
-    </div>
+   
 
   </div>
 </section>
