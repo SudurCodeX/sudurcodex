@@ -7,14 +7,14 @@ import ServiceCTA from "../Other/ServiceCTA";
 
 function Services() {
   return (
-    <div className="w-full bg-(--bg-color) text-(--prim-color)">
+    <div className="w-full   text-(--prim-color)">
       {/* Hero Section */}
-      <div className="flex flex-col items-center text-center px-6 py-20">
+      <div className=" bg-img h-screen flex flex-col justify-center items-center text-center px-6 py-20">
         <h4 className="text-5xl md:text-6xl font-bold mb-6">
           Our <span className="text-blue-400">Services</span>
         </h4>
 
-        <p className="text-lg md:text-xl max-w-3xl text-gray-400 leading-relaxed">
+        <p className="text-lg md:text-xl max-w-3xl text-white leading-relaxed">
           We provide end-to-end technology solutions designed to help businesses
           grow, automate processes, and innovate faster. From product
           development to training and internships, we deliver scalable and
@@ -27,9 +27,9 @@ function Services() {
       </div>
 
       {/* Services Cards */}
-      <div className="pb-16">
+     
         <ServiceCard />
-      </div>
+     
 
       {/* Other Sections */}
       <DevelopmentProcess />

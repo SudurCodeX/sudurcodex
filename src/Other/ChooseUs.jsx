@@ -16,7 +16,7 @@ export default function ChooseUs() {
 
       <div className="w-full  mx-auto grid md:grid-cols-2 gap-5 px-6 items-center ">
         {/* Left Image */}
-        <div className=" w-[80%] overflow-hidden rounded-xl">
+        <div className=" w-full lg:w-[80%] overflow-hidden rounded-xl">
           <img
             src="c1.jpg"
             alt="Team working"

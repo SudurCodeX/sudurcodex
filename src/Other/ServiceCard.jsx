@@ -33,7 +33,7 @@ function ServiceCard() {
     },
   ];
   return (
-    <div className=" w-full  bg-[#4f4d4d70]   flex  flex-wrap lg:flex-nowrap sm:p-0   p-8   ">
+    <div className="  w-full  lg:h-130  bg-zinc-100   flex  flex-wrap lg:flex-nowrap  p-4    ">
       <Swiper
         spaceBetween={25}
         autoplay={{
@@ -43,7 +43,7 @@ function ServiceCard() {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Autoplay, Pagination]}
-        className="w-[90%] h-100   "
+        className="w-full   lg:h-110     "
         breakpoints={{
           0: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -51,24 +51,24 @@ function ServiceCard() {
         }}
       >
         {servicesData.map((elem, idx) => (
-          <SwiperSlide key={idx}>
+          <SwiperSlide className="  lg:pt-7 " key={idx}>
             <div
               key={idx}
-              className="  p-2 sm:m-auto  lg:m-3  lg:h-85  flex lg:flex-row flex-col-reverse  shadow-[0px_2px_3px_#fff]   rounded-lg"
+              className="  p-2 h-[90%]  sm:m-auto  lg:m-1   lg:h-85  flex lg:flex-row flex-col-reverse  shadow-[0px_2px_3px_#000000]   rounded-lg"
             >
               {/* Left */}
-              <div className="   lg:w-1/2 h-full  p-4     ">
-                <h3 className=" text-xl lg:text-4xl font-bold text-white">
+              <div className="   lg:w-1/2   p-4     ">
+                <h3 className=" text-xl lg:text-4xl font-bold text-gray-800">
                   {elem.title}
                 </h3>
-                <p className="text-base  opacity-90 pt-2 text-blue-200">
+                <p className="text-base  opacity-90 pt-2 text-gray-900">
                   {elem.description}
                 </p>
               </div>
 
               {/* Right */}
 
-              <div className="  lg:w-1/2 h-[95%] border-2 border-[#281C18] rounded-lg  mx-2 my-2  p-2 ">
+              <div className="  lg:w-1/2 h-[50%] lg:h-[80%] border-2 border-gray-400 rounded-lg  mx-2 my-2  p-2 ">
                 <img
                   src={elem.imgUrl}
                   alt=""
