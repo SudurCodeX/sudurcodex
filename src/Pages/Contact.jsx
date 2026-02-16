@@ -130,13 +130,13 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="First Name"
             required
-            className="bg-transparent border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+            className="placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
           />
 
           <input
             type="text"
             placeholder="Last Name"
-            className="bg-transparent border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+            className="placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
           />
         </div>
 
@@ -148,7 +148,7 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Email"
           required
-          className="w-full bg-transparent border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+          className="w-full placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
         />
 
         {/* Message */}
@@ -159,7 +159,7 @@ const ContactForm = () => {
           placeholder="Write a message"
           rows="4"
           required
-          className="w-full bg-transparent border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+          className="w-full placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
         ></textarea>
 
         {/* Submit Button */}
