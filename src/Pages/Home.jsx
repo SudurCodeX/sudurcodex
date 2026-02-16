@@ -16,7 +16,6 @@ const Home = () => {
 >
   {/* Dark Overlay */}
   <div className="absolute inset-0 bg-blue-950/80"></div>
-<<<<<<< HEAD
 
   {/* Content */}
   <div className="relative z-10 max-w-5xl px-6 text-center">
@@ -64,8 +63,6 @@ const Home = () => {
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
-=======
->>>>>>> mahesh-frontend
 
   {/* Content */}
   <div className="relative z-10 max-w-5xl px-6 text-center">
