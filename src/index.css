@@ -27,7 +27,11 @@
   border-radius: 10px;
 }
 
-
+.bg-img{
+  background: url("team.png");
+  opacity:0.8;
+ 
+}
 
 
 
