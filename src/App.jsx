@@ -6,18 +6,22 @@ import Footer from './Components/Footer'
 import Contact from './Pages/Contact'
 import About from './Pages/About'
 
+import Services from './Pages/Services'
 function App() {
   return (
-    <>
+    <div className='bg-(--bg-color) text-white w-full min-h-screen'>
     <Navbar/>
      <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path="/about" element={<About/>}></Route>
       <Route path='/contact' element={<Contact/>}></Route>
+      <Route path='/contact' element={<Contact/>}/>
+      <Route path ="/services" element={<Services/>} />
+      
      </Routes>
      <Footer/>
       
-    </>
+    </div>
   )
 }
 
