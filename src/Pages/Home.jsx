@@ -1,6 +1,8 @@
 import React from "react";
 import { Code, Brain, GraduationCap } from "lucide-react";
 import { Zap, Shield, Users, Rocket, HeartHandshake, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -76,7 +78,7 @@ const Home = () => {
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           
           <button className="px-6 py-3 rounded-lg text-white font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90 transition">
-            Get Started →
+            <Link to='/contact'>Get Started →</Link> 
           </button>
 
           <button className="px-6 py-3 rounded-lg border border-gray-400 text-zinc-100 font-medium hover:bg-orange-400 transition">
@@ -90,6 +92,62 @@ const Home = () => {
 
   </div>
 </section>
+{/* about sudurcodex  */}
+    <section className="bg-gray-50 py-24 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+        {/* LEFT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <p className="text-blue-900 font-semibold uppercase tracking-widest mb-4">
+            About SudurCodex
+          </p>
+
+          <h2 className="text-black text-4xl md:text-5xl font-light leading-tight mb-8">
+            Empowering Businesses
+            <br />
+            Through Intelligent Technology
+          </h2>
+
+          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+            SudurCodex is a Nepal-based technology company delivering
+            modern web development, AI-powered solutions, and scalable
+            digital systems designed for long-term business growth.
+          </p>
+
+          <p className= "text-gray-600 text-lg leading-relaxed hidden lg:flex">
+            Beyond enterprise solutions, we foster innovation through
+            workshops, hackathons, and internship programs that prepare
+            the next generation of industry-ready professionals.
+          </p>
+
+          <div className="mt-10">
+            <button className="bg-blue-950 text-white px-8 py-3 rounded-full hover:bg-blue-800 transition">
+             <Link to='/about'>Learn More</Link>
+            </button>
+          </div>
+        </motion.div>
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <img
+            src="ai.png"
+            alt="SudurCodex Innovation"
+            className="rounded-2xl shadow-2xl w-full"
+          />
+        </motion.div>
+
+      </div>
+    </section>
+
+
 
       {/* why to coose section  */}
     <section className="py-20 bg-gray-50 px-6">
