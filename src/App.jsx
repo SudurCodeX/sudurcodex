@@ -6,6 +6,7 @@ import Footer from './Components/Footer'
 import Contact from './Pages/Contact'
 import About from './Pages/About'
 import Services from './Pages/Services'
+import PageNotFound from '../public/PageNotFound'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/about" element={<About/>}></Route>
       <Route path='/contact' element={<Contact/>}></Route>
       <Route path='/services' element={<Services/>}></Route>
+      <Route path='*' element={<PageNotFound/>}></Route>
      </Routes>
      <Footer/>
       

@@ -50,13 +50,13 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-white">Contact</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li>Email: sudurcode8848@gmail.com</li>
+            <li>Email: sudurcodex8848@gmail.com</li>
             <li>SudurPaschim Nepal</li>
           </ul>
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-4 text-lg">
-            <a href="#" className="hover:text-white">
+            <a href="https://github.com/SudurCodeX" className="hover:text-white">
               <FaGithub />
             </a>
             <a href="https://www.linkedin.com/company/sudur-codex/" target="_blank" className="hover:text-white">
