@@ -32,8 +32,8 @@ html {
 
 .bg-img{
   background: url("team.png");
-  opacity:0.8;
- 
+  background-repeat: no-repeat;
+ background-size: cover;
 }
 
 

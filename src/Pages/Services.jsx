@@ -2,14 +2,12 @@ import React from "react";
 import ServiceCard from "../Other/ServiceCard";
 import DevelopmentProcess from "../Other/DevelopmentProcess";
 import ChooseUs from "../Other/ChooseUs";
-
 import ServiceCTA from "../Other/ServiceCTA";
-
 function Services() {
   return (
     <div className="w-full   text-(--prim-color)">
       {/* Hero Section */}
-      <div className=" bg-img h-screen  flex flex-col justify-center items-center text-center px-6 py-20">
+      <div className=" bg-img h-screen w-full flex flex-col justify-center items-center text-center px-6 py-20">
         <h4 className="text-5xl md:text-6xl font-bold mb-6">
           Our <span className="text-blue-400">Services</span>
         </h4>
@@ -21,7 +19,7 @@ function Services() {
           future-ready digital solutions.
         </p>
 
-        <button className="mt-8 px-8 py-3 bg-orange-500 rounded-lg hover:bg-orange-600 transition">
+        <button className="mt-8 px-8 py-3 text-zinc-100 bg-orange-500 rounded-lg hover:bg-orange-600 transition">
           Explore Services
         </button>
       </div>
