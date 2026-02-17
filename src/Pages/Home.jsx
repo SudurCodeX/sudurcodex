@@ -1,8 +1,10 @@
 import React from "react";
 import { Code, Brain, GraduationCap } from "lucide-react";
 import { Zap, Shield, Users, Rocket, HeartHandshake, TrendingUp } from "lucide-react";
+import { Globe, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import WhatWeDo from "../Components/WhatWeDo";
 
 
 const Home = () => {
@@ -146,7 +148,8 @@ const Home = () => {
 
       </div>
     </section>
-
+    {/* what we do setion   */}
+       <WhatWeDo/>
 
 
       {/* why to coose section  */}

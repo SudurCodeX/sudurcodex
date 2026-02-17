@@ -18,12 +18,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300
+      className={`sticky top-0 z-50 transition-all duration-300 border-b-2 border-zinc-700
       ${
         scrolled
           ? "bg-white/90 backdrop-blur-md shadow-lg"
           : "bg-white/90 backdrop-blur-sm"
-      } text-zinc-600`}
+      } text-zinc-700 font-semibold`}
     >
       <div className="mx-auto px-8 sm:px-2 py-4 flex justify-between items-center">
 
