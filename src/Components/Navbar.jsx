@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* Logo */}
         <h1 className="text-2xl tracking-wide font-extrabold">
           SUDUR
-          <span className="text-orange-600">CODE</span>
+          <span className="text-orange-500">CODE</span>
           <span className="text-3xl italic text-amber-400">X</span>
         </h1>
 
