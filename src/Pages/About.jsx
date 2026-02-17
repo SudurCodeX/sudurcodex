@@ -63,7 +63,8 @@ const About = () => {
       </button>
 
       <button className="w-full sm:w-auto px-8 py-3 text-base sm:text-lg font-medium border border-white text-white rounded-full hover:bg-white hover:text-blue-950 transition duration-300">
-        Learn More
+        <Link to='/contact'> Learn More</Link>
+        
       </button>
     </motion.div>
 
