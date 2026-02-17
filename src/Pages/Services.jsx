@@ -27,14 +27,11 @@ function Services() {
       </div>
 
       {/* Services Cards */}
-     
-        <ServiceCard />
-     
-
+      <ServiceCard />
       {/* Other Sections */}
       <DevelopmentProcess />
       <ChooseUs />
-     
+
       <ServiceCTA />
     </div>
   );
