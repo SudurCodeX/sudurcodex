@@ -112,7 +112,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-md px-6 py-2 pb-6">
+        <div className="md:hidden bg-zinc-200 backdrop-blur-md px-6 py-2 pb-6">
           <ul className="space-y-4 text-sm font-medium">
 
             <li>
