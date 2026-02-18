@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate()
 
   // Detect scroll
   useEffect(() => {
@@ -97,7 +98,7 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="bg-orange-600 text-white font-bold py-2 px-5 rounded transition active:scale-90 hover:bg-orange-700">
+          <button onClick={()=>navigate("/ourwork")} className="bg-orange-600 text-white font-bold py-2 px-5 rounded transition active:scale-90 hover:bg-orange-700">
             Get Started
           </button>
         </div>
