@@ -69,9 +69,9 @@ const ContactForm = () => {
 
     <div className="relative text-center px-6">
       <h1 className="text-4xl md:text-5xl font-semibold leading-snug">
-        Hello. <br />
+        Hello<br />
         Let’s work together <br />
-        on your next project.
+        Connect With Our Team.
       </h1>
     </div>
   </div>
