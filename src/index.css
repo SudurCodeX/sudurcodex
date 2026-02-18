@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: myfont;
+  src: url("/fonts/font.ttf");
+}
 html {
   scroll-behavior: smooth;
 }
@@ -87,3 +92,33 @@ html {
   transform: translate(-50%, -50%);
   animation: float 6s ease-in-out infinite, tilt 6s ease-in-out infinite;
 }
+
+
+
+/* Use font in Text */
+
+.textClass{
+  font-family: myfont;
+  
+}
+
+
+/* Animation for text scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
