@@ -185,7 +185,6 @@ const About = () => {
   </div>
 
 </section>
-
       {/* ENTERPRISE IMPACT SECTION */}
       <section className="bg-blue-950 text-white py-32">
         <div className="max-w-6xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-20 text-center">
