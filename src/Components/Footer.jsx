@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Company */}
-        <div>
+        <div className="hidden md:inline">
           <h3 className="text-lg font-semibold text-white">Company</h3>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
