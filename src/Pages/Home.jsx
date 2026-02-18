@@ -85,7 +85,7 @@ const Home = () => {
           </button>
 
           <button className="px-6 py-3 rounded-lg border border-gray-400 text-zinc-100 font-medium hover:bg-orange-400 transition">
-            View Our Work
+           <Link to='/ourwork' >View Our Work</Link>
           </button>
 
         </div>
