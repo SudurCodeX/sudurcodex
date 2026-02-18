@@ -19,22 +19,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 border-b-2 border-zinc-700
+      className={`sticky top-0 z-50 transition-all duration-300 border-b-2 border-zinc-700 
       ${
         scrolled
           ? "bg-white/90 backdrop-blur-md shadow-lg"
           : "bg-white/90 backdrop-blur-sm"
       } text-zinc-700 font-semibold`}
     >
-      <div className="mx-auto px-8 sm:px-2 py-4 flex justify-between items-center">
-
-        {/* Logo */}
-        <h1 className="text-2xl tracking-wide font-extrabold">
-          SUDUR
-          <span className="text-orange-500">CODE</span>
-          <span className="text-3xl italic text-amber-400">X</span>
-        </h1>
-
+      <div className="mx-auto h-15 md:h-20 px-8 sm:px-2 py-4 flex justify-between items-center">
+       <img src="/navlogo.png"   className="h-10 md:h-14 w-auto object-contain"></img>
+      
         {/* Desktop Menu */}
         <div className="hidden md:flex px-8 py-4 rounded-3xl
           
@@ -134,6 +128,11 @@ const Navbar = () => {
 
             <li>
               <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+            </li>
+            <li>
+              <button onClick={()=>navigate("/ourwork")} className="bg-orange-600 text-white font-bold py-2 px-5 rounded transition active:scale-90 hover:bg-orange-700">
+            Get Started
+          </button>
             </li>
 
           </ul>
