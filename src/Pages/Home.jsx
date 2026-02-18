@@ -5,6 +5,7 @@ import { Globe, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import WhatWeDo from "../Components/WhatWeDo";
+import Testimonal from "../Other/Testimonal";
 
 
 const Home = () => {
@@ -193,6 +194,8 @@ const Home = () => {
 
       </div>
     </section>
+
+    <Testimonal/>
 
       
 
