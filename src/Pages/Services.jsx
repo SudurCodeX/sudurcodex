@@ -3,6 +3,9 @@ import ServiceCard from "../Other/ServiceCard";
 import DevelopmentProcess from "../Other/DevelopmentProcess";
 import ChooseUs from "../Other/ChooseUs";
 import ServiceCTA from "../Other/ServiceCTA";
+import FAQ from "../Other/FAQ"
+import SpotlightText from "../Other/SpotlightText";
+import ScrollingText from "../Other/ScrollingText";
 function Services() {
   return (
     <div className="w-full   text-(--prim-color)">
@@ -29,8 +32,12 @@ function Services() {
       {/* Other Sections */}
       <DevelopmentProcess />
       <ChooseUs />
+      <FAQ/>
+
+      <ScrollingText/>
 
       <ServiceCTA />
+      <SpotlightText/>
     </div>
   );
 }
