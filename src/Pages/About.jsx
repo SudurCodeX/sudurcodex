@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import FAQ from "../Other/FAQ";
 
 const About = () => {
   return (
@@ -242,6 +243,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <FAQ/>
 
     </div>
   );
