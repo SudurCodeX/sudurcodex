@@ -31,16 +31,24 @@ const services = [
 
 const WhatWeDo = () => {
   return (
-    <section
-      className="relative bg-fixed bg-cover bg-center py-36 px-6 md:px-16"
-      style={{ backgroundImage: "url('nature.pngj')" }}
-    >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-950/90 to-black/80"></div>
+    <section className="relative overflow-hidden">
 
-      <div className="relative max-w-7xl mx-auto text-white">
+      {/* PARALLAX BACKGROUND */}
+      <div
+        className="absolute inset-0 bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('/banner.png')",
+        }}
+      />
 
-        {/* Header */}
+      {/* Corporate Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-blue-950/85 to-black/90"></div>
+
+      {/* CONTENT */}
+      <div className="relative py-36 px-6 md:px-16 max-w-7xl mx-auto text-white">
+
+        {/* HEADER */}
         <motion.div
           className="text-center mb-24"
           initial={{ opacity: 0, y: 60 }}
@@ -48,47 +56,48 @@ const WhatWeDo = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="uppercase text-2xl font-bold tracking-[0.2em] text-blue-300 mb-6">
+          <p className="uppercase text-sm tracking-[0.4em] text-blue-400 mb-6">
             What We Do
           </p>
 
           <h2 className="text-4xl md:text-5xl font-light leading-tight mb-8">
-            Driving Digital Transformation
+            Engineering Intelligent
             <br />
-            <span className="font-normal text-blue-300">
-              Through Innovation & Education
+            <span className="text-blue-400 font-normal">
+              Digital Transformation
             </span>
           </h2>
 
           <p className="max-w-3xl mx-auto text-blue-200 text-lg leading-relaxed">
-            SudurCodex combines enterprise engineering, AI innovation,
-            and hands-on learning programs to accelerate digital growth
-            and empower Nepal’s next generation of technology leaders.
+            SudurCodex integrates enterprise engineering, AI innovation,
+            and practical technology education to empower businesses
+            and develop future-ready professionals across Nepal.
           </p>
         </motion.div>
-        {/* Services Grid */}
-         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-14">
 
-        {services.map((service, index) => {
+        {/* SERVICES GRID */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <motion.div
                 key={index}
-                className="group bg-white p-10 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500"
+                className="group bg-white/95 backdrop-blur-lg p-10 rounded-2xl border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500"
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: index * 0.15 }}
                 viewport={{ once: true }}
               >
                 {/* Accent Line */}
-                <div className="h-1 w-12 bg-blue-900 mb-8 group-hover:w-20 transition-all duration-500"></div>
+                <div className="h-1 w-10 bg-blue-900 mb-8 group-hover:w-20 transition-all duration-500"></div>
 
                 <Icon
-                  size={34}
+                  size={36}
                   className="text-blue-900 mb-6"
                 />
 
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">
                   {service.title}
                 </h3>
 
@@ -98,7 +107,7 @@ const WhatWeDo = () => {
 
                 <Link
                   to="/contact"
-                  className="text-blue-900 font-medium tracking-wide hover:underline"
+                  className="text-blue-900 font-medium hover:underline"
                 >
                   Learn More →
                 </Link>
