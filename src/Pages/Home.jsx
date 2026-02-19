@@ -6,6 +6,11 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import WhatWeDo from "../Components/WhatWeDo";
 import Testimonal from "../Other/Testimonal";
+import { useEffect,useRef } from "react";
+import { useScroll, useTransform } from 'framer-motion';
+import AboutSection from "../Other/AboutSetion";
+
+
 
 
 const Home = () => {
@@ -41,114 +46,121 @@ const Home = () => {
       desc: "Built for growth, our solutions scale effortlessly as your business expands.",
     },
   ];
+   useEffect(() => {
+    // Add smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Parallax effect on scroll
+    const handleScroll = () => {
+      const videoSection = document.querySelector('.hero-video-bg');
+      if (videoSection) {
+        videoSection.style.transform = `translateY(${window.scrollY * 0.5}px)`;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="bg-blue-950 text-white">
 
 
       {/* HERO SECTION */}
-     <section
-  className="relative min-h-screen flex items-center justify-center text-white bg-fixed bg-center bg-cover"
-  style={{
-    backgroundImage:
-      "url('/banner.png')", // Everest-style image
-  }}
->
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-gray-950/70"></div>
-
-
-  {/* Content */}
-  <div className="relative z-10 max-w-5xl px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-6">
-          ✨ Transforming Businesses Digitally
+  <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center text-white">
+        {/* Video Background */}
+        <div className="hero-video-bg absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/banner1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-         {/* Heading */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-zinc-100">
-          Your Vision,{" "}
-          <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
-            Our Innovation
-          </span>
-        </h1>
-        {/* Description */}
-        <p className="mt-6 text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
-          SudurcodeX delivers cutting-edge digital solutions to help your
-          business thrive in the modern world. From AI-powered tools to
-          stunning web experiences.
-        </p>
 
-        {/* Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          
-          <button className="px-6 py-3 rounded-lg text-white font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90 transition">
-            <Link to='/contact'>Get Started →</Link> 
-          </button>
+        {/* Dark Overlay with Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-gray-950/70 to-gray-950/80"></div>
 
-          <button className="px-6 py-3 rounded-lg border border-gray-400 text-zinc-100 font-medium hover:bg-orange-400 transition">
-           <Link to='/ourwork' >View Our Work</Link>
-          </button>
-
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
-  
 
-   
-
-  </div>
-</section>
-{/* about sudurcodex  */}
-    <section className="bg-gray-50 py-24 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-
-        {/* LEFT CONTENT */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="text-blue-900 font-semibold uppercase tracking-widest mb-4">
-            About SudurCodex
-          </p>
-
-          <h2 className="text-black text-4xl md:text-5xl font-light leading-tight mb-8">
-            Empowering Businesses
-            <br />
-            Through Intelligent Technology
-          </h2>
-
-          <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            SudurCodex is a Nepal-based technology company delivering
-            modern web development, AI-powered solutions, and scalable
-            digital systems designed for long-term business growth.
-          </p>
-
-          <p className= "text-gray-600 text-lg leading-relaxed hidden lg:flex">
-            Beyond enterprise solutions, we foster innovation through
-            workshops, hackathons, and internship programs that prepare
-            the next generation of industry-ready professionals.
-          </p>
-
-          <div className="mt-10">
-            <button className="bg-blue-950 text-white px-8 py-3 rounded-full hover:bg-blue-800 transition">
-             <Link to='/about'>Learn More</Link>
-            </button>
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl px-6 text-center space-y-8 animate-fade-in">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/50 text-blue-300 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-md hover:bg-blue-500/30 transition duration-300">
+            <span className="animate-spin text-lg">✨</span>
+            Transforming Businesses Digitally
           </div>
-        </motion.div>
 
-        {/* RIGHT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <img
-            src="ai.png"
-            alt="SudurCodex Innovation"
-            className="rounded-2xl shadow-2xl w-full"
-          />
-        </motion.div>
+          {/* Heading */}
+          <h1 className="text-3xl md:text-7xl font-bold leading-tight tracking-tight">
+            Your Vision,{' '}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
+              Our Innovation
+            </span>
+          </h1>
 
-      </div>
-    </section>
+          {/* Description */}
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            SudurcodeX delivers cutting-edge digital solutions to help your
+            business thrive in the modern world. From AI-powered tools to
+            stunning web experiences, we turn your ideas into reality.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
+            {/* Primary Button */}
+            <Link to='/contact'>
+              <button className="group relative px-8 py-4 rounded-lg text-white font-semibold text-lg overflow-hidden transition duration-300 hover:shadow-2xl hover:shadow-blue-500/50">
+                {/* Gradient Background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:from-blue-500 group-hover:to-purple-500 transition duration-300"></div>
+                
+                {/* Button Content */}
+                <span className="relative flex items-center gap-2">
+                  Get Started
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+
+            {/* Secondary Button */}
+            <Link to='/ourwork'>
+              <button className="group relative px-8 py-4 rounded-lg text-white font-semibold text-lg overflow-hidden transition duration-300 hover:shadow-2xl hover:shadow-purple-500/50">
+                {/* Border and Hover Background */}
+                <div className="absolute inset-0 border-2 border-gray-400/50 group-hover:border-purple-400/80 transition duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 to-pink-600/0 group-hover:from-purple-600/20 group-hover:to-pink-600/20 transition duration-300"></div>
+                
+                {/* Button Content */}
+                <span className="relative flex items-center gap-2">
+                  View Our Work
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+      </section>
+{/* about sudurcodex  */}
+<AboutSection/>
     {/* what we do setion   */}
        <WhatWeDo/>
 
@@ -197,7 +209,37 @@ const Home = () => {
 
     <Testimonal/>
 
-      
+           {/* Custom Styles */}
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes gradient {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient 3s ease infinite;
+        }
+      `}</style>
 
     </div>
   );

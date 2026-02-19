@@ -10,7 +10,12 @@ function Services() {
   return (
     <div className="w-full   text-(--prim-color)">
       {/* Hero Section */}
+<<<<<<< HEAD
       <div className=" bg-img h-screen w-full flex flex-col justify-center items-center text-center px-6 py-20">
+=======
+      <div className=" bg-img h-screen w-full flex flex-col justify-center items-center text-center px-6 py-20"
+      style={{ backgroundImage: "url('/team.png')" }} >
+>>>>>>> c2140cb64328b572eb1b0d3ca934a2bc727a56fc
         <h4 className="text-5xl md:text-6xl font-bold mb-6">
           Our <span className="text-blue-400">Services</span>
         </h4>
