@@ -32,12 +32,14 @@ function Services() {
       {/* Other Sections */}
       <DevelopmentProcess />
       <ChooseUs />
-      <FAQ/>
 
-      <ScrollingText/>
+      <div className="hidden lg:flex"><FAQ /></div>
+      
+
+      <ScrollingText />
 
       <ServiceCTA />
-      <SpotlightText/>
+      <SpotlightText />
     </div>
   );
 }
