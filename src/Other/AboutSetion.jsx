@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScroll, useTransform } from 'framer-motion';
@@ -59,14 +60,14 @@ export default function AboutSection() {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: false }}
             >
-              {/* <div>
+              <div>
                 <p className="text-3xl font-bold text-blue-600">500+</p>
                 <p className="text-sm text-gray-600">Projects</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-blue-600">10+</p>
                 <p className="text-sm text-gray-600">Years</p>
-              </div> */}
+              </div>
             </motion.div>
           </motion.div>
 

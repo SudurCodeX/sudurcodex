@@ -101,7 +101,7 @@ const Home = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-7xl font-bold leading-tight tracking-tight">
             Your Vision,{' '}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
               Our Innovation
