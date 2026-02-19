@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import { Code, Brain, GraduationCap } from "lucide-react";
-=======
-
->>>>>>> durpat-frontend
 import {
   Zap,
   Shield,
@@ -12,7 +8,6 @@ import {
   HeartHandshake,
   TrendingUp,
 } from "lucide-react";
-<<<<<<< HEAD
 import { Globe, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -20,15 +15,6 @@ import WhatWeDo from "../Components/WhatWeDo";
 import Testimonal from "../Other/Testimonal";
 import { useEffect, useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";
-=======
-
-
-import { Link } from "react-router-dom";
-import WhatWeDo from "../Components/WhatWeDo";
-import Testimonal from "../Other/Testimonal";
-import { useEffect } from "react";
-
->>>>>>> durpat-frontend
 import AboutSection from "../Other/AboutSetion";
 
 const Home = () => {
@@ -83,11 +69,7 @@ const Home = () => {
   return (
     <div className="bg-blue-950 text-white">
       {/* HERO SECTION */}
-<<<<<<< HEAD
       <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center text-white">
-=======
-      <section className="relative p-4 lg:min-h-screen w-full overflow-hidden flex items-center justify-center text-white">
->>>>>>> durpat-frontend
         {/* Video Background */}
         <div className="hero-video-bg absolute inset-0 w-full h-full">
           <video
@@ -218,7 +200,6 @@ const Home = () => {
       <WhatWeDo />
 
       {/* why to coose section  */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50 px-6">
         <div className="max-w-6xl mx-auto text-center">
           {/* Heading */}
@@ -253,56 +234,6 @@ const Home = () => {
                 <p className="mt-3 text-gray-600 leading-relaxed">
                   {item.desc}
                 </p>
-=======
-      <section className="  relative py-28 bg-gradient-to-b from-gray-50 to-white px-6 overflow-hidden">
-        {/* Background Glow */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-3xl"></div>
-
-        <div className="relative max-w-7xl mx-auto text-center">
-          {/* Heading */}
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900">
-            Why Choose{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
-              SudurcodeX
-            </span>
-            ?
-          </h2>
-
-          {/* Subtitle */}
-          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            We blend technology, creativity, and strategy to build powerful
-            digital experiences that drive real business growth.
-          </p>
-
-          {/* Cards */}
-          <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((item, index) => (
-              <div
-                key={index}
-                className="group relative p-[1px] rounded-3xl bg-zinc-200 transition duration-500 hover:scale-105"
-              >
-                {/* Glass Card */}
-                <div className="relative h-full bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-white/40 shadow-xl transition duration-500 group-hover:shadow-2xl">
-                  {/* Icon */}
-                  <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white mb-6 shadow-lg group-hover:rotate-6 transition duration-500">
-                    {item.icon}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {item.title}
-                  </h3>
-
-                  {/* Divider */}
-                  <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-3 mb-4 group-hover:w-20 transition-all duration-500"></div>
-
-                  {/* Description */}
-                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-
-                  {/* Hover Glow */}
-                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-xl"></div>
-                </div>
->>>>>>> durpat-frontend
               </div>
             ))}
           </div>
