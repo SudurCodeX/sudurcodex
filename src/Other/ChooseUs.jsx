@@ -69,7 +69,7 @@ const ChooseUs = () => {
     <ReactLenis root>
       <section
         ref={container}
-        className="hidden lg:flex relative h-full w-full py-20 bg-white"
+        className=" hidden lg:block relative h-full w-full py-20 bg-white"
       >
         <h2 className="text-4xl font-bold text-center text-orange-500 mb-10">
           Why Choose Us ?
