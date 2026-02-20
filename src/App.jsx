@@ -8,27 +8,25 @@ import About from './Pages/About'
 import Services from './Pages/Services'
 import PageNotFound from './Pages/PageNotFound'
 import OurWork from './Pages/Ourwork'
-<<<<<<< HEAD
 import Chatbot from './Components/Chatbot'
-=======
 import Hackathon from './Pages/Hackathon'
-import Training from './Pages/Training'
+import Training  from './Pages/Training'
+import  Web  from './Pages/Web'
 import AI_Automation from './Pages/AI_Automation'
-import Web from './Pages/Web'
->>>>>>> refs/remotes/origin/main
+
 
 
 function App() {
   return (
     <div className='bg-(--bg-color) text-white w-full min-h-screen'>
     <Navbar/>
-      <Chatbot/>
+      {/* <Chatbot/> */}
 
      <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path="/about" element={<About/>}></Route>
       <Route path='/contact' element={<Contact/>}></Route>
-      <Route path='/services' element={<Services/>}></Route>
+    <Route path='/services' element={<Services/>}></Route>
       <Route path='/ourwork' element={<OurWork/>}></Route>
       <Route path='*' element={<PageNotFound/>}></Route>
 
