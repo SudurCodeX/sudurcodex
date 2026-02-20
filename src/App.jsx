@@ -6,9 +6,16 @@ import Footer from './Components/Footer'
 import Contact from './Pages/Contact'
 import About from './Pages/About'
 import Services from './Pages/Services'
-import PageNotFound from '../public/PageNotFound'
+import PageNotFound from './Pages/PageNotFound'
 import OurWork from './Pages/Ourwork'
+<<<<<<< HEAD
 import Chatbot from './Components/Chatbot'
+=======
+import Hackathon from './Pages/Hackathon'
+import Training from './Pages/Training'
+import AI_Automation from './Pages/AI_Automation'
+import Web from './Pages/Web'
+>>>>>>> refs/remotes/origin/main
 
 
 function App() {
@@ -24,6 +31,13 @@ function App() {
       <Route path='/services' element={<Services/>}></Route>
       <Route path='/ourwork' element={<OurWork/>}></Route>
       <Route path='*' element={<PageNotFound/>}></Route>
+
+      {/* Other routes */}
+
+      <Route path='/hackathon' element={<Hackathon/>}/>
+      <Route path='/training' element={<Training/>} />
+      <Route path='/ai_automation' element={<AI_Automation/>} />
+      <Route path='/web' element={<Web/>} />
 
      </Routes>
      <Footer/>
