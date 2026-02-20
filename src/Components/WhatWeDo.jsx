@@ -8,24 +8,29 @@ const services = [
     title: "Enterprise Web Platforms",
     description:
       "Scalable, secure, and performance-driven web systems engineered for modern enterprises.",
+
+    url: "/web",
   },
   {
     icon: Cpu,
     title: "AI & Automation Systems",
     description:
       "Intelligent AI infrastructure transforming operations with smart automation and analytics.",
+    url: "/ai_automation",
   },
   {
     icon: GraduationCap,
     title: "Professional IT Training",
     description:
       "Industry-aligned programs preparing future-ready engineers and digital leaders.",
+      url:"/training"
   },
   {
     icon: Rocket,
     title: "Innovation Labs & Hackathons",
     description:
       "Driving innovation through collaborative research, internships, and product incubation.",
+      url:"/hackathon"
   },
 ];
 
@@ -98,7 +103,7 @@ const WhatWeDo = () => {
                 </p>
 
                 <Link
-                  to="/contact"
+                  to={service.url}
                   className="text-blue-400 font-medium tracking-wide hover:text-purple-400 transition"
                 >
                   Learn More →
