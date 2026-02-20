@@ -131,3 +131,11 @@ video {
   from { transform: scale(1.05); }
   to { transform: scale(1.15); }
 }
+/* // chabot styling */
+df-messenger {
+      --df-messenger-button-titlebar-color: #0833f0;
+      --df-messenger-bot-message: #3134e4;
+      --df-messenger-user-message: #22c55e;
+      --df-messenger-chat-background-color: #f3f5fc;
+      --df-messenger-font-color: #ffffff;
+}

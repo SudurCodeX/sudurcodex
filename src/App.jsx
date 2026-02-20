@@ -8,12 +8,15 @@ import About from './Pages/About'
 import Services from './Pages/Services'
 import PageNotFound from '../public/PageNotFound'
 import OurWork from './Pages/Ourwork'
+import Chatbot from './Components/Chatbot'
 
 
 function App() {
   return (
     <div className='bg-(--bg-color) text-white w-full min-h-screen'>
     <Navbar/>
+      <Chatbot/>
+
      <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path="/about" element={<About/>}></Route>
