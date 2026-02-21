@@ -132,10 +132,63 @@ video {
   to { transform: scale(1.15); }
 }
 /* // chabot styling */
+
 df-messenger {
-      --df-messenger-button-titlebar-color: #0833f0;
-      --df-messenger-bot-message: #3134e4;
-      --df-messenger-user-message: #22c55e;
-      --df-messenger-chat-background-color: #f3f5fc;
-      --df-messenger-font-color: #ffffff;
+  /* ORANGE BRAND THEME */
+  --df-messenger-button-titlebar-color: #ff7a00;
+  --df-messenger-user-message: #ff7a00;
+  --df-messenger-send-icon: #ff7a00;
+
+  --df-messenger-chat-background-color: #ffffff;
+  --df-messenger-bot-message: #fff3e6;
+  --df-messenger-font-color: #000;
+
+  /* LARGE ICON */
+  --df-messenger-chat-icon-size: 72px;
+
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+/* Rounded icon */
+df-messenger::part(chat-icon) {
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ff7a00;
+  padding: 8px;
+}
+/* Remove yellow border */
+/* Remove border from input */
+df-messenger::part(input) {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent;
+}
+
+/* Remove focus border */
+df-messenger::part(input):focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove border from container */
+df-messenger::part(input-box) {
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border-radius: 18px;
+}
+
+/* Custom focus glow (instead of yellow border) */
+df-messenger::part(input-box):focus-within {
+  border: 1px solid #ff7a00 !important;
+  box-shadow: 0 0 0 3px rgba(255,122,0,0.15) !important;
+}
+df-messenger::part(textarea) {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }

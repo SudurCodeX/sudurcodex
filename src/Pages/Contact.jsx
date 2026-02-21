@@ -6,6 +6,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
+    user_lastname:"",
     message: "",
   });
 
@@ -44,6 +45,7 @@ const ContactForm = () => {
       setFormData({
         user_name: "",
         user_email: "",
+        user_lastname:"",
         message: "",
       });
 
@@ -130,13 +132,18 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="First Name"
             required
-            className="placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+            className="placeholder:text-zinc-600 border-b border-gray-400 focus:border-blue-600 outline-none py-2 text-black"
           />
 
           <input
             type="text"
             placeholder="Last Name"
-            className="placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+            name="user_lastname"
+            value={formData.user_lastname}
+            onChange={handleChange}
+            required
+
+            className="placeholder:text-zinc-600 border-b border-gray-400 focus:border-blue-600 outline-none py-2 text-black"
           />
         </div>
 
@@ -148,7 +155,7 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Email"
           required
-          className="w-full placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+          className="w-full placeholder:text-zinc-600 text-black border-b border-gray-400 focus:border-blue-600 outline-none py-2"
         />
 
         {/* Message */}
@@ -159,7 +166,7 @@ const ContactForm = () => {
           placeholder="Write a message"
           rows="4"
           required
-          className="w-full placeholder:text-zinc-400 border-b border-gray-400 focus:border-blue-600 outline-none py-2"
+          className="w-full placeholder:text-zinc-600 border-b border-gray-400 focus:border-blue-600 outline-none py-2 text-black"
         ></textarea>
 
         {/* Submit Button */}

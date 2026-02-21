@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='bg-(--bg-color) text-white w-full min-h-screen'>
     <Navbar/>
-      {/* <Chatbot/> */}
+      <Chatbot/>
 
      <Routes>
       <Route path='/' element={<Home/>}></Route>
